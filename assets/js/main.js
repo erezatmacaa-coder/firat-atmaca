@@ -1,7 +1,7 @@
 const words = [
-  'Fikirleri ve hikayeleri inşa ediyorum',
-  'Girişimci & Yazar',
-  'İlham veren hikayeler'
+  'Digital Growth & Affiliate Marketing',
+  'Founder & Head of Content',
+  '30M+ Monthly Reach'
 ];
 
 const typewriterEl = document.getElementById('typewriter');

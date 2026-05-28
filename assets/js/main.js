@@ -1,6 +1,5 @@
 const words = [
   'Fikirleri ve hikayeleri inşa ediyorum',
-  'Özgürlük, farkındalık, dönüşüm',
   'Girişimci & Yazar',
   'İlham veren hikayeler'
 ];

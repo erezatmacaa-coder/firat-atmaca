@@ -427,7 +427,25 @@ body {
   color: var(--text-muted);
   margin-top: 4px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+}
+
+.about-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 10px 24px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.about-linkedin:hover {
+  background: var(--gold);
+  color: #0a0a0a;
+  border-color: var(--gold);
 }
 
 /* Projects */

@@ -628,19 +628,6 @@ body {
   font-size: 14px;
 }
 
-/* Instagram Feed */
-.instagram-feed {
-  max-width: 600px;
-  margin: 0 auto;
-  min-height: 200px;
-}
-.instagram-placeholder {
-  text-align: center;
-  color: var(--text-muted);
-  padding: 60px 20px;
-  font-style: italic;
-}
-
 /* Footer */
 footer {
   border-top: 1px solid var(--border);

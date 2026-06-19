@@ -324,13 +324,31 @@ body {
 }
 .service-card:hover .service-glow { opacity: 1; }
 
-.areas-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.area-tag {
-  padding: 12px 28px; border: 1px solid var(--border); border-radius: 50px;
-  font-size: 14px; font-weight: 500; color: var(--text-muted);
-  transition: all 0.3s; cursor: default;
+.areas-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
 }
-.area-tag:hover { border-color: var(--primary); color: var(--text); background: rgba(59,130,246,0.04); }
+.area-card {
+  background: rgba(15,23,42,0.4); backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 28px 20px; text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+.area-card:hover {
+  border-color: rgba(59,130,246,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.08), 0 0 40px rgba(59,130,246,0.02);
+}
+.area-card-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,214,160,0.06));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px; transition: all 0.4s;
+}
+.area-card:hover .area-card-icon { transform: scale(1.1); }
+.area-card-icon i { font-size: 18px; color: var(--primary); }
+.area-card h3 { font-size: 14px; font-weight: 600; letter-spacing: -0.2px; }
 
 .cta-section .cta-content { text-align: center; max-width: 700px; margin: 0 auto; }
 .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }

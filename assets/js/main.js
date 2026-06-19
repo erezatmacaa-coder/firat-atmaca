@@ -27,7 +27,7 @@ const LANG = {
     svc4_title: 'Content Strategy', svc4_desc: 'Viral ve dönüşüm odaklı içerik planlama.',
     svc5_title: 'Brand Partnerships', svc5_desc: 'Marka iş birlikleri ve özel kampanya kurguları.',
     svc6_title: 'Event & Community', svc6_desc: 'Etkinlik, lansman ve topluluk projelerinin dijital görünürlüğünü artırma.',
-    areas_title: 'Çalışma Alanları',
+    areas_title: 'Çalışma Alanlarım',
     areas_desc: 'Deneyim kazandığım ve aktif olarak proje yürüttüğüm sektörler',
     area_1: 'E-Ticaret', area_2: 'Teknoloji', area_3: 'SaaS',
     area_4: 'Etkinlik ve Organizasyon', area_5: 'Finans',

@@ -218,33 +218,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat').forEach(el => counterObserver.observe(el));
 
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / centerY * -8;
-    const rotateY = (x - centerX) / centerX * 8;
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
-  });
-});
 
-document.querySelectorAll('.btn').forEach(btn => {
-  btn.addEventListener('mousemove', (e) => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-  });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = 'translate(0, 0)';
-  });
-});
 
 const glow = document.querySelector('.mouse-glow');
 if (glow) {
@@ -350,11 +324,4 @@ window.addEventListener('resize', () => {
   if (canvas) { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
 });
 
-const heroContent = document.querySelector('.hero-content');
-document.addEventListener('mousemove', (e) => {
-  if (window.innerWidth > 768) {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    if (heroContent) heroContent.style.transform = `translate(${x}px, ${y}px)`;
-  }
-});
+

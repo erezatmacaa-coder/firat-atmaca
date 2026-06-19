@@ -32,6 +32,7 @@ const LANG = {
     area_1: 'E-Ticaret', area_2: 'Teknoloji', area_3: 'SaaS',
     area_4: 'Etkinlik ve Organizasyon', area_5: 'Finans',
     area_6: 'Perakende', area_7: 'Turizm', area_8: 'Startup Ekosistemi',
+    area_9: 'Yapay Zeka',
     cta_title: 'Bir Sonraki Büyüme Hikayenizi Birlikte Oluşturalım.',
     cta_desc: 'Markanızın dijital görünürlüğünü, erişimini ve dönüşüm performansını artırmak için iletişime geçebilirsiniz.',
     cta_btn: 'İletişime Geç',
@@ -70,6 +71,7 @@ const LANG = {
     area_1: 'E-Commerce', area_2: 'Technology', area_3: 'SaaS',
     area_4: 'Events & Organization', area_5: 'Finance',
     area_6: 'Retail', area_7: 'Tourism', area_8: 'Startup Ecosystem',
+    area_9: 'Artificial Intelligence',
     cta_title: 'Let\'s Build Your Next Growth Story Together.',
     cta_desc: 'Get in touch to increase your brand\'s digital visibility, reach, and conversion performance.',
     cta_btn: 'Get in Touch',
@@ -108,6 +110,7 @@ const LANG = {
     area_1: 'E-Commerce', area_2: 'Technologie', area_3: 'SaaS',
     area_4: 'Events & Organisation', area_5: 'Finanzen',
     area_6: 'Einzelhandel', area_7: 'Tourismus', area_8: 'Startup-Ökosystem',
+    area_9: 'Künstliche Intelligenz',
     cta_title: 'Lassen Sie uns Ihre nächste Wachstumsgeschichte gemeinsam schreiben.',
     cta_desc: 'Kontaktieren Sie mich, um die digitale Sichtbarkeit, Reichweite und Conversion Ihrer Marke zu steigern.',
     cta_btn: 'Kontakt aufnehmen',
@@ -146,6 +149,7 @@ const LANG = {
     area_1: 'E-Commerce', area_2: 'Technologie', area_3: 'SaaS',
     area_4: 'Événements & Organisation', area_5: 'Finance',
     area_6: 'Commerce de détail', area_7: 'Tourisme', area_8: 'Écosystème startup',
+    area_9: 'Intelligence Artificielle',
     cta_title: 'Construisons ensemble votre prochaine histoire de croissance.',
     cta_desc: 'Contactez-moi pour augmenter la visibilité numérique, la portée et la performance de conversion de votre marque.',
     cta_btn: 'Me contacter',
@@ -286,7 +290,9 @@ function switchLang(lang) {
 }
 
 function selectLang(lang) {
-  document.getElementById('langOverlay').classList.add('hidden');
+  const overlay = document.getElementById('langOverlay');
+  overlay.classList.add('hidden');
+  overlay.addEventListener('transitionend', () => { overlay.style.display = 'none'; }, { once: true });
   switchLang(lang);
 }
 

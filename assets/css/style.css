@@ -391,9 +391,10 @@ footer p { color: var(--text-muted); font-size: 13px; }
 .lang-overlay {
   position: fixed; inset: 0; z-index: 99999;
   background: var(--bg); display: flex; align-items: center; justify-content: center;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.4s;
 }
-.lang-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.lang-overlay.hidden { opacity: 0; pointer-events: none; }
+.lang-overlay.hidden .lang-overlay-content { display: none; }
 .lang-overlay-content { text-align: center; max-width: 480px; padding: 20px; }
 .lang-overlay-content h2 {
   font-size: 28px; font-weight: 700; margin-bottom: 40px; letter-spacing: -0.5px;

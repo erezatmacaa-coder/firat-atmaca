@@ -254,6 +254,31 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = entry.target;
+      const numEl = target.querySelector('.stat-num');
+      if (numEl && !target.dataset.counted) {
+        target.dataset.counted = 'true';
+        const text = numEl.textContent;
+        const digits = text.match(/[\d]/g);
+        if (!digits) return;
+        const suffix = text.replace(/[\d]/g, '');
+        const max = parseInt(text) || 0;
+        let current = 0;
+        const inc = max / 40;
+        const timer = setInterval(() => {
+          current += inc;
+          if (current >= max) { numEl.textContent = max + suffix; clearInterval(timer); }
+          else numEl.textContent = Math.floor(current) + suffix;
+        }, 30);
+      }
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-card').forEach(el => counterObserver.observe(el));
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 if (hamburger && navLinks) {

@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fırat Atmaca</title>
+  <meta name="description" content="Fırat Atmaca — Affiliate marketing, influencer marketing ve dijital büyüme stratejileriyle markaların görünürlüğünü ve satışlarını artırıyorum." />
+  <meta property="og:title" content="Fırat Atmaca — Digital Growth & Affiliate Marketing" />
+  <meta property="og:description" content="Affiliate marketing, influencer marketing ve performans odaklı dijital büyüme stratejileri." />
+  <meta name="theme-color" content="#070B14" />
+  <title>Fırat Atmaca — Digital Growth & Affiliate Marketing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="mouse-glow"></div>
+  <div class="mouse-glow" id="mouseGlow"></div>
   <canvas id="particles-canvas"></canvas>
 
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">Fırat <span class="gold">Atmaca</span></a>
+      <a href="#" class="logo">Fırat <span class="gradient-text">Atmaca</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" data-i18n="nav_home">Ana Sayfa</a></li>
+        <li><a href="#hero" data-i18n="nav_home" class="nav-active">Ana Sayfa</a></li>
         <li><a href="#about" data-i18n="nav_about">Hakkımda</a></li>
-        <li><a href="#projects" data-i18n="nav_projects">Projeler</a></li>
-        <li><a href="#philosophy" data-i18n="nav_philosophy">Felsefe</a></li>
+        <li><a href="#services" data-i18n="nav_services">Hizmetler</a></li>
+        <li><a href="#areas" data-i18n="nav_areas">Çalışma Alanları</a></li>
         <li><a href="#contact" data-i18n="nav_contact">İletişim</a></li>
         <li class="lang-switcher">
           <button class="lang-btn active" data-lang="tr" onclick="switchLang('tr')">TR</button>
@@ -39,18 +43,15 @@
   </nav>
 
   <section id="hero">
-    <div class="hero-overlay"></div>
+    <div class="hero-gradient"></div>
     <div class="container hero-content">
-      <div class="hero-badge" data-i18n="hero_badge">Digital Growth & Affiliate Marketing</div>
-      <h1 class="hero-title">Fırat <span class="gold">Atmaca</span></h1>
-      <div class="hero-type-wrapper">
-        <span class="hero-type" id="typewriter"></span>
-        <span class="cursor">|</span>
-      </div>
-      <p class="hero-desc" data-i18n="hero_desc">Dijital medya ve e-ticaret dikeyinde, milyonlarca kullanıcıya hitap eden bir operasyonu yönetiyorum.</p>
+      <div class="hero-badge" data-i18n="hero_tag">DIGITAL GROWTH &bull; AFFILIATE MARKETING &bull; INFLUENCER MARKETING</div>
+      <h1 class="hero-title" data-i18n="hero_title">Milyonlarca Kişiye Ulaşan İçerikler.<br><span class="gradient-text">Ölçülebilir Sonuçlar.</span></h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Affiliate marketing, influencer marketing ve performans odaklı dijital büyüme stratejileriyle markaların görünürlüğünü, erişimini ve satışlarını artırıyorum.</p>
+      <p class="hero-desc" data-i18n="hero_desc">400.000&rsquo;in üzerinde takipçi ve milyonlarca aylık görüntülemeye ulaşan dijital medya operasyonları yönetiyor; markalarla yüksek etkileşimli iş birlikleri geliştiriyorum.</p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn1">Projeleri Keşfet</a>
-        <a href="#contact" class="btn btn-outline" data-i18n="hero_btn2">İletişime Geç</a>
+        <a href="#services" class="btn btn-primary" data-i18n="hero_btn1">Çalışmalarımı İncele</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero_btn2">İş Birliği Yapalım</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -59,105 +60,104 @@
     </div>
   </section>
 
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-num" data-i18n="stat_1_val">250K+</span><span class="stat-label" data-i18n="stat_1_label">Toplam Takipçi</span></div>
+        <div class="stat-card"><span class="stat-num" data-i18n="stat_2_val">12M+</span><span class="stat-label" data-i18n="stat_2_label">Aylık Görüntüleme</span></div>
+        <div class="stat-card"><span class="stat-num" data-i18n="stat_3_val">50+</span><span class="stat-label" data-i18n="stat_3_label">Marka İş Birliği</span></div>
+        <div class="stat-card"><span class="stat-num" data-i18n="stat_4_val">100M+</span><span class="stat-label" data-i18n="stat_4_label">Toplam Erişim</span></div>
+      </div>
+    </div>
+  </section>
+
   <section id="about" class="section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image reveal-left">
-          <div class="about-img-frame">
-            <div class="about-img-inner">
-              <i class="fas fa-quote-left gold"></i>
-            </div>
-          </div>
+        <div class="about-text reveal">
+          <h2 class="section-title" data-i18n="about_title">Dijital Büyüme Odaklı Bir Yaklaşım</h2>
+          <p data-i18n="about_p1">Yıllardır influencer marketing, affiliate marketing ve dijital medya alanlarında faaliyet gösteriyorum.</p>
+          <p data-i18n="about_p2">Sahip olduğum medya ağları ve içerik platformları aracılığıyla her ay milyonlarca görüntüleme üretiyor, markaların hedef kitlelerine daha hızlı ve etkili ulaşmalarına yardımcı oluyorum.</p>
+          <p data-i18n="about_p3">Etkinliklerden e-ticarete, teknolojiden perakendeye kadar farklı sektörlerde markalarla performans odaklı iş birlikleri geliştiriyor; görünürlüğü gerçek sonuçlara dönüştürüyorum.</p>
         </div>
-        <div class="about-text reveal-right">
-          <h2 class="section-label" data-i18n="about_title">Hakkımda</h2>
-          <p class="about-bio" data-i18n="about_bio">Dijital medya ve e-ticaret dikeyinde, milyonlarca kullanıcıya hitap eden bir operasyonu yönetiyorum. Stratejik yönetim, marka ortaklıkları ve veri analizi odaklı çalışarak aylık 30M+ trafiği satışa dönüştürüyorum.</p>
-          <a href="https://www.linkedin.com/in/firat-atmaca-50944384" target="_blank" rel="noopener" class="about-linkedin"><i class="fab fa-linkedin-in"></i> <span data-i18n="about_linkedin">LinkedIn'de Takip Et</span></a>
-
-          <div class="about-stats">
-            <div class="stat"><span class="stat-num">177K+</span><span class="stat-label" data-i18n="stat_followers">Takipçi</span></div>
-            <div class="stat"><span class="stat-num">2+</span><span class="stat-label" data-i18n="stat_projects">Proje</span></div>
-            <div class="stat"><span class="stat-num">∞</span><span class="stat-label" data-i18n="stat_ideas">Fikir</span></div>
+        <div class="about-visual reveal">
+          <div class="about-message">
+            <span class="about-message-line" data-i18n="about_msg1">Influencer Gücü.</span>
+            <span class="about-message-line gradient-text" data-i18n="about_msg2">Performans Pazarlaması.</span>
+            <span class="about-message-line" data-i18n="about_msg3">Gerçek Sonuçlar.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="services" class="section section-alt">
     <div class="container">
-      <h2 class="section-title split-text" data-i18n="projects_title">Projeler</h2>
-      <p class="section-desc" data-i18n="projects_desc">Hayata geçirdiğim fikirler ve ilham veren hikayeler</p>
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-num">01</div>
-          <h3 class="project-name" data-i18n="proj1_name">Affiliate & Lifestyle</h3>
-          <p class="project-desc" data-i18n="proj1_desc">Markalarla iş birliği, yaşam tarzı içerikleri ve dijital pazarlama stratejileri ile geniş kitlelere ulaşan bir ekosistem.</p>
-          <div class="project-links">
-            <a href="https://instagram.com/fi.at" target="_blank" rel="noopener" class="project-link"><i class="fab fa-instagram"></i> @fi.at</a>
-            <a href="https://instagram.com/indirim_aktuel.katalog" target="_blank" rel="noopener" class="project-link"><i class="fab fa-instagram"></i> @indirim_aktuel.katalog</a>
-          </div>
+      <h2 class="section-title" data-i18n="services_title">Hizmetler</h2>
+      <p class="section-desc" data-i18n="services_desc">Markanızı büyütmek için sunduğum stratejik çözümler</p>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3 data-i18n="svc1_title">Influencer Marketing</h3>
+          <p data-i18n="svc1_desc">Markalar için yüksek erişim ve etkileşim sağlayan içerik kampanyaları.</p>
         </div>
-        <div class="project-card reveal">
-          <div class="project-num">02</div>
-          <h3 class="project-name" data-i18n="proj2_name">Farkındalık Yolları</h3>
-          <p class="project-desc" data-i18n="proj2_desc">Farkındalık, kişisel gelişim ve dönüşüm üzerine içerikler. İnsanların kendini keşfetme yolculuğunda onlara eşlik eden bir platform.</p>
-          <a href="https://instagram.com/farkindalikyollari" target="_blank" rel="noopener" class="project-link"><i class="fab fa-instagram"></i> @farkindalikyollari</a>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 data-i18n="svc2_title">Affiliate Marketing</h3>
+          <p data-i18n="svc2_desc">Performans bazlı satış ve gelir artırma sistemleri.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="philosophy" class="section philosophy-section">
-    <div class="container">
-      <div class="philosophy-content">
-        <h2 class="section-title gold split-text" data-i18n="phil_title">Felsefe</h2>
-        <div class="philosophy-grid">
-          <div class="philosophy-card reveal">
-            <i class="fas fa-feather"></i>
-            <h3 data-i18n="phil1_title">Yazar Ruhu</h3>
-            <p data-i18n="phil1_desc">Her hikaye bir fikirle başlar. Ben de fikirleri hikayelere dönüştürüyorum.</p>
-          </div>
-          <div class="philosophy-card reveal">
-            <i class="fas fa-eye"></i>
-            <h3 data-i18n="phil2_title">Farkındalık</h3>
-            <p data-i18n="phil2_desc">Kendini bilmek, tüm yolculukların başlangıcıdır. Farkındalık dönüşümün anahtarıdır.</p>
-          </div>
-          <div class="philosophy-card reveal">
-            <i class="fas fa-lightbulb"></i>
-            <h3 data-i18n="phil3_title">Dönüşüm</h3>
-            <p data-i18n="phil3_desc">Değişim kaçınılmazdır, dönüşüm ise bir seçim. Her an yeniden doğma fırsatıdır.</p>
-          </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3 data-i18n="svc3_title">Digital Growth</h3>
+          <p data-i18n="svc3_desc">Veri odaklı büyüme stratejileri ve ölçekleme.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+          <h3 data-i18n="svc4_title">Content Strategy</h3>
+          <p data-i18n="svc4_desc">Viral ve dönüşüm odaklı içerik planlama.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-handshake"></i></div>
+          <h3 data-i18n="svc5_title">Brand Partnerships</h3>
+          <p data-i18n="svc5_desc">Marka iş birlikleri ve özel kampanya kurguları.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-calendar-star"></i></div>
+          <h3 data-i18n="svc6_title">Event &amp; Community</h3>
+          <p data-i18n="svc6_desc">Etkinlik, lansman ve topluluk projelerinin dijital görünürlüğünü artırma.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="areas" class="section">
     <div class="container">
-      <h2 class="section-title split-text" data-i18n="contact_title">İletişim</h2>
-      <p class="section-desc" data-i18n="contact_desc">Bana ulaşmak ve projelerimi takip etmek için</p>
-      <div class="contact-links">
-        <a href="https://instagram.com/fi.at" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-          <span data-i18n="contact_main">Ana Hesap</span>
-          <small>@fi.at</small>
-        </a>
-        <a href="https://www.linkedin.com/in/firat-atmaca-50944384" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-          <span>LinkedIn</span>
-          <small>firat-atmaca-50944384</small>
-        </a>
-        <a href="mailto:firat.atmacaa@gmail.com" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <span>Email</span>
-          <small>firat.atmacaa@gmail.com</small>
-        </a>
-        <a href="https://instagram.com/indirim_aktuel.katalog" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-          <span data-i18n="contact_catalog">İndirim & Aktüel Katalog</span>
-          <small>@indirim_aktuel.katalog</small>
-        </a>
+      <h2 class="section-title" data-i18n="areas_title">Çalışma Alanları</h2>
+      <p class="section-desc" data-i18n="areas_desc">Deneyim kazandığım ve aktif olarak proje yürüttüğüm sektörler</p>
+      <div class="areas-grid">
+        <span class="area-tag" data-i18n="area_1">E-Ticaret</span>
+        <span class="area-tag" data-i18n="area_2">Teknoloji</span>
+        <span class="area-tag" data-i18n="area_3">SaaS</span>
+        <span class="area-tag" data-i18n="area_4">Etkinlik ve Organizasyon</span>
+        <span class="area-tag" data-i18n="area_5">Finans</span>
+        <span class="area-tag" data-i18n="area_6">Perakende</span>
+        <span class="area-tag" data-i18n="area_7">Turizm</span>
+        <span class="area-tag" data-i18n="area_8">Startup Ekosistemi</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt cta-section">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="section-title" data-i18n="cta_title">Bir Sonraki Büyüme Hikayenizi Birlikte Oluşturalım.</h2>
+        <p class="section-desc" data-i18n="cta_desc">Markanızın dijital görünürlüğünü, erişimini ve dönüşüm performansını artırmak için iletişime geçebilirsiniz.</p>
+        <div class="cta-buttons">
+          <a href="mailto:firat.atmacaa@gmail.com" class="btn btn-primary" data-i18n="cta_btn">İletişime Geç</a>
+          <a href="https://www.linkedin.com/in/firat-atmaca-50944384" target="_blank" rel="noopener" class="btn btn-linkedin">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -166,9 +166,9 @@
     <div class="container">
       <p data-i18n="footer_copy">&copy; 2026 Fırat Atmaca. Tüm hakları saklıdır.</p>
       <div class="footer-links">
-        <a href="https://instagram.com/fi.at" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/firat-atmaca-50944384" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:firat.atmacaa@gmail.com" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/fi.at" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/firat-atmaca-50944384" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:firat.atmacaa@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>

@@ -1,127 +1,192 @@
 const LANG = {
   tr: {
-    nav_home: 'Ana Sayfa', nav_about: 'Hakkımda', nav_projects: 'Projeler',
-    nav_philosophy: 'Felsefe', nav_contact: 'İletişim',
-    hero_badge: 'Digital Growth & Affiliate Marketing',
-    hero_desc: 'Dijital medya ve e-ticaret dikeyinde, milyonlarca kullanıcıya hitap eden bir operasyonu yönetiyorum.',
-    hero_btn1: 'Projeleri Keşfet', hero_btn2: 'İletişime Geç',
+    nav_home: 'Ana Sayfa', nav_about: 'Hakkımda', nav_services: 'Hizmetler',
+    nav_areas: 'Çalışma Alanları', nav_contact: 'İletişim',
+    hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
+    hero_title: 'Milyonlarca Kişiye Ulaşan İçerikler.\nÖlçülebilir Sonuçlar.',
+    hero_subtitle: 'Affiliate marketing, influencer marketing ve performans odaklı dijital büyüme stratejileriyle markaların görünürlüğünü, erişimini ve satışlarını artırıyorum.',
+    hero_desc: '400.000\'in üzerinde takipçi ve milyonlarca aylık görüntülemeye ulaşan dijital medya operasyonları yönetiyor; markalarla yüksek etkileşimli iş birlikleri geliştiriyorum.',
+    hero_btn1: 'Çalışmalarımı İncele', hero_btn2: 'İş Birliği Yapalım',
     scroll: 'Aşağı kaydır',
-    about_title: 'Hakkımda',
-    about_bio: 'Dijital medya ve e-ticaret dikeyinde, milyonlarca kullanıcıya hitap eden bir operasyonu yönetiyorum. Stratejik yönetim, marka ortaklıkları ve veri analizi odaklı çalışarak aylık 30M+ trafiği satışa dönüştürüyorum.',
-    about_linkedin: "LinkedIn'de Takip Et",
-    stat_followers: 'Takipçi', stat_projects: 'Proje', stat_ideas: 'Fikir',
-    projects_title: 'Projeler',
-    projects_desc: 'Hayata geçirdiğim fikirler ve ilham veren hikayeler',
-    proj1_name: 'Affiliate & Lifestyle',
-    proj1_desc: 'Markalarla iş birliği, yaşam tarzı içerikleri ve dijital pazarlama stratejileri ile geniş kitlelere ulaşan bir ekosistem.',
-    proj2_name: 'Farkındalık Yolları',
-    proj2_desc: 'Farkındalık, kişisel gelişim ve dönüşüm üzerine içerikler. İnsanların kendini keşfetme yolculuğunda onlara eşlik eden bir platform.',
-    phil_title: 'Felsefe',
-    phil1_title: 'Yazar Ruhu', phil1_desc: 'Her hikaye bir fikirle başlar. Ben de fikirleri hikayelere dönüştürüyorum.',
-    phil2_title: 'Farkındalık', phil2_desc: 'Kendini bilmek, tüm yolculukların başlangıcıdır. Farkındalık dönüşümün anahtarıdır.',
-    phil3_title: 'Dönüşüm', phil3_desc: 'Değişim kaçınılmazdır, dönüşüm ise bir seçim. Her an yeniden doğma fırsatıdır.',
-    contact_title: 'İletişim', contact_desc: 'Bana ulaşmak ve projelerimi takip etmek için',
-    contact_main: 'Ana Hesap', contact_catalog: 'İndirim & Aktüel Katalog',
+    stat_1_val: '250K+', stat_1_label: 'Toplam Takipçi',
+    stat_2_val: '12M+', stat_2_label: 'Aylık Görüntüleme',
+    stat_3_val: '50+', stat_3_label: 'Marka İş Birliği',
+    stat_4_val: '100M+', stat_4_label: 'Toplam Erişim',
+    about_title: 'Dijital Büyüme Odaklı Bir Yaklaşım',
+    about_p1: 'Yıllardır influencer marketing, affiliate marketing ve dijital medya alanlarında faaliyet gösteriyorum.',
+    about_p2: 'Sahip olduğum medya ağları ve içerik platformları aracılığıyla her ay milyonlarca görüntüleme üretiyor, markaların hedef kitlelerine daha hızlı ve etkili ulaşmalarına yardımcı oluyorum.',
+    about_p3: 'Etkinliklerden e-ticarete, teknolojiden perakendeye kadar farklı sektörlerde markalarla performans odaklı iş birlikleri geliştiriyor; görünürlüğü gerçek sonuçlara dönüştürüyorum.',
+    about_msg1: 'Influencer Gücü.',
+    about_msg2: 'Performans Pazarlaması.',
+    about_msg3: 'Gerçek Sonuçlar.',
+    services_title: 'Hizmetler',
+    services_desc: 'Markanızı büyütmek için sunduğum stratejik çözümler',
+    svc1_title: 'Influencer Marketing', svc1_desc: 'Markalar için yüksek erişim ve etkileşim sağlayan içerik kampanyaları.',
+    svc2_title: 'Affiliate Marketing', svc2_desc: 'Performans bazlı satış ve gelir artırma sistemleri.',
+    svc3_title: 'Digital Growth', svc3_desc: 'Veri odaklı büyüme stratejileri ve ölçekleme.',
+    svc4_title: 'Content Strategy', svc4_desc: 'Viral ve dönüşüm odaklı içerik planlama.',
+    svc5_title: 'Brand Partnerships', svc5_desc: 'Marka iş birlikleri ve özel kampanya kurguları.',
+    svc6_title: 'Event & Community', svc6_desc: 'Etkinlik, lansman ve topluluk projelerinin dijital görünürlüğünü artırma.',
+    areas_title: 'Çalışma Alanları',
+    areas_desc: 'Deneyim kazandığım ve aktif olarak proje yürüttüğüm sektörler',
+    area_1: 'E-Ticaret', area_2: 'Teknoloji', area_3: 'SaaS',
+    area_4: 'Etkinlik ve Organizasyon', area_5: 'Finans',
+    area_6: 'Perakende', area_7: 'Turizm', area_8: 'Startup Ekosistemi',
+    cta_title: 'Bir Sonraki Büyüme Hikayenizi Birlikte Oluşturalım.',
+    cta_desc: 'Markanızın dijital görünürlüğünü, erişimini ve dönüşüm performansını artırmak için iletişime geçebilirsiniz.',
+    cta_btn: 'İletişime Geç',
     footer_copy: '© 2026 Fırat Atmaca. Tüm hakları saklıdır.',
   },
   en: {
-    nav_home: 'Home', nav_about: 'About', nav_projects: 'Projects',
-    nav_philosophy: 'Philosophy', nav_contact: 'Contact',
-    hero_badge: 'Digital Growth & Affiliate Marketing',
-    hero_desc: 'I manage an operation reaching millions of users in digital media and e-commerce.',
-    hero_btn1: 'Explore Projects', hero_btn2: 'Get in Touch',
+    nav_home: 'Home', nav_about: 'About', nav_services: 'Services',
+    nav_areas: 'Work Areas', nav_contact: 'Contact',
+    hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
+    hero_title: 'Content Reaching Millions.\nMeasurable Results.',
+    hero_subtitle: 'Driving visibility, reach, and sales for brands through affiliate marketing, influencer marketing, and performance-driven digital growth strategies.',
+    hero_desc: 'Managing digital media operations reaching 400K+ followers and millions of monthly views; developing high-engagement brand collaborations.',
+    hero_btn1: 'View My Work', hero_btn2: 'Let\'s Collaborate',
     scroll: 'Scroll down',
-    about_title: 'About Me',
-    about_bio: "I manage an operation reaching millions of users in digital media and e-commerce. Through strategic management, brand partnerships, and data analysis, I convert 30M+ monthly traffic into sales.",
-    about_linkedin: 'Follow on LinkedIn',
-    stat_followers: 'Followers', stat_projects: 'Projects', stat_ideas: 'Ideas',
-    projects_title: 'Projects',
-    projects_desc: 'Ideas I brought to life and inspiring stories',
-    proj1_name: 'Affiliate & Lifestyle',
-    proj1_desc: 'An ecosystem reaching broad audiences through brand collaborations, lifestyle content, and digital marketing strategies.',
-    proj2_name: 'Awareness Paths',
-    proj2_desc: 'Content on awareness, personal growth, and transformation. A platform accompanying people on their self-discovery journey.',
-    phil_title: 'Philosophy',
-    phil1_title: 'Writer Soul', phil1_desc: 'Every story begins with an idea. I turn ideas into stories.',
-    phil2_title: 'Awareness', phil2_desc: 'Knowing yourself is the beginning of all journeys. Awareness is the key to transformation.',
-    phil3_title: 'Transformation', phil3_desc: 'Change is inevitable, transformation is a choice. Every moment is an opportunity to be reborn.',
-    contact_title: 'Contact', contact_desc: 'Reach out and follow my projects',
-    contact_main: 'Main Account', contact_catalog: 'Discount & Current Catalog',
+    stat_1_val: '250K+', stat_1_label: 'Total Followers',
+    stat_2_val: '12M+', stat_2_label: 'Monthly Views',
+    stat_3_val: '50+', stat_3_label: 'Brand Collaborations',
+    stat_4_val: '100M+', stat_4_label: 'Total Reach',
+    about_title: 'A Growth-Focused Approach',
+    about_p1: 'I have been active in influencer marketing, affiliate marketing, and digital media for years.',
+    about_p2: 'Through my media networks and content platforms, I generate millions of views each month, helping brands reach their target audiences faster and more effectively.',
+    about_p3: 'I develop performance-driven partnerships with brands across sectors from events to e-commerce, technology to retail, turning visibility into real results.',
+    about_msg1: 'Influencer Power.',
+    about_msg2: 'Performance Marketing.',
+    about_msg3: 'Real Results.',
+    services_title: 'Services',
+    services_desc: 'Strategic solutions to grow your brand',
+    svc1_title: 'Influencer Marketing', svc1_desc: 'High-reach content campaigns with strong engagement for brands.',
+    svc2_title: 'Affiliate Marketing', svc2_desc: 'Performance-based sales and revenue growth systems.',
+    svc3_title: 'Digital Growth', svc3_desc: 'Data-driven growth strategies and scaling.',
+    svc4_title: 'Content Strategy', svc4_desc: 'Viral and conversion-focused content planning.',
+    svc5_title: 'Brand Partnerships', svc5_desc: 'Brand collaborations and custom campaign design.',
+    svc6_title: 'Event & Community', svc6_desc: 'Boosting digital visibility for events, launches, and community projects.',
+    areas_title: 'Work Areas',
+    areas_desc: 'Industries I have experience in and actively work with',
+    area_1: 'E-Commerce', area_2: 'Technology', area_3: 'SaaS',
+    area_4: 'Events & Organization', area_5: 'Finance',
+    area_6: 'Retail', area_7: 'Tourism', area_8: 'Startup Ecosystem',
+    cta_title: 'Let\'s Build Your Next Growth Story Together.',
+    cta_desc: 'Get in touch to increase your brand\'s digital visibility, reach, and conversion performance.',
+    cta_btn: 'Get in Touch',
     footer_copy: '© 2026 Fırat Atmaca. All rights reserved.',
   },
   de: {
-    nav_home: 'Start', nav_about: 'Über mich', nav_projects: 'Projekte',
-    nav_philosophy: 'Philosophie', nav_contact: 'Kontakt',
-    hero_badge: 'Digital Growth & Affiliate Marketing',
-    hero_desc: 'Ich leite eine Operation, die Millionen von Nutzern in den Bereichen digitale Medien und E-Commerce erreicht.',
-    hero_btn1: 'Projekte entdecken', hero_btn2: 'Kontakt aufnehmen',
+    nav_home: 'Start', nav_about: 'Über mich', nav_services: 'Leistungen',
+    nav_areas: 'Bereiche', nav_contact: 'Kontakt',
+    hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
+    hero_title: 'Inhalte, die Millionen erreichen.\nMessbare Ergebnisse.',
+    hero_subtitle: 'Durch Affiliate-Marketing, Influencer-Marketing und leistungsorientierte digitale Wachstumsstrategien steigere ich Sichtbarkeit, Reichweite und Verkäufe für Marken.',
+    hero_desc: 'Ich betreibe digitale Medien mit über 400.000 Followern und Millionen monatlicher Aufrufe und entwickle hochwirksame Markenkooperationen.',
+    hero_btn1: 'Meine Arbeit ansehen', hero_btn2: 'Zusammenarbeiten',
     scroll: 'Nach unten scrollen',
-    about_title: 'Über mich',
-    about_bio: 'Ich leite eine Operation, die Millionen von Nutzern in den Bereichen digitale Medien und E-Commerce erreicht. Durch strategisches Management, Markenpartnerschaften und Datenanalyse verwandle ich monatlich 30M+ Traffic in Verkäufe.',
-    about_linkedin: 'Auf LinkedIn folgen',
-    stat_followers: 'Follower', stat_projects: 'Projekte', stat_ideas: 'Ideen',
-    projects_title: 'Projekte',
-    projects_desc: 'Ideen, die ich verwirklicht habe, und inspirierende Geschichten',
-    proj1_name: 'Affiliate & Lifestyle',
-    proj1_desc: 'Ein Ökosystem, das durch Markenkooperationen, Lifestyle-Inhalte und digitale Marketingstrategien ein breites Publikum erreicht.',
-    proj2_name: 'Bewusstseinswege',
-    proj2_desc: 'Inhalte zu Bewusstsein, persönlichem Wachstum und Transformation. Eine Plattform, die Menschen auf ihrer Reise der Selbstentdeckung begleitet.',
-    phil_title: 'Philosophie',
-    phil1_title: 'Schreiberseele', phil1_desc: 'Jede Geschichte beginnt mit einer Idee. Ich verwandle Ideen in Geschichten.',
-    phil2_title: 'Bewusstsein', phil2_desc: 'Sich selbst zu kennen ist der Beginn aller Reisen. Bewusstsein ist der Schlüssel zur Transformation.',
-    phil3_title: 'Wandel', phil3_desc: 'Veränderung ist unvermeidlich, Transformation ist eine Wahl. Jeder Moment ist eine Chance, neu geboren zu werden.',
-    contact_title: 'Kontakt', contact_desc: 'Erreiche mich und folge meinen Projekten',
-    contact_main: 'Hauptkonto', contact_catalog: 'Rabatt & Aktueller Katalog',
+    stat_1_val: '250K+', stat_1_label: 'Follower gesamt',
+    stat_2_val: '12M+', stat_2_label: 'Monatliche Aufrufe',
+    stat_3_val: '50+', stat_3_label: 'Markenkooperationen',
+    stat_4_val: '100M+', stat_4_label: 'Gesamtreichweite',
+    about_title: 'Ein wachstumsorientierter Ansatz',
+    about_p1: 'Ich bin seit Jahren im Influencer-Marketing, Affiliate-Marketing und in den digitalen Medien tätig.',
+    about_p2: 'Durch meine Mediennetzwerke und Content-Plattformen generiere ich monatlich Millionen von Aufrufen und helfe Marken, ihre Zielgruppen schneller und effektiver zu erreichen.',
+    about_p3: 'Ich entwickle leistungsorientierte Partnerschaften mit Marken aus verschiedenen Branchen und verwandle Sichtbarkeit in echte Ergebnisse.',
+    about_msg1: 'Influencer Power.',
+    about_msg2: 'Performance Marketing.',
+    about_msg3: 'Echte Ergebnisse.',
+    services_title: 'Leistungen',
+    services_desc: 'Strategische Lösungen für Ihr Markenwachstum',
+    svc1_title: 'Influencer Marketing', svc1_desc: 'Reichweitenstarke Content-Kampagnen mit hohem Engagement.',
+    svc2_title: 'Affiliate Marketing', svc2_desc: 'Performance-basierte Verkaufs- und Umsatzsysteme.',
+    svc3_title: 'Digital Growth', svc3_desc: 'Datengetriebene Wachstumsstrategien und Skalierung.',
+    svc4_title: 'Content Strategy', svc4_desc: 'Viral- und conversionsorientierte Content-Planung.',
+    svc5_title: 'Brand Partnerships', svc5_desc: 'Markenkooperationen und individuelle Kampagnen.',
+    svc6_title: 'Event & Community', svc6_desc: 'Digitale Sichtbarkeit für Events, Launches und Community-Projekte.',
+    areas_title: 'Bereiche',
+    areas_desc: 'Branchen mit Erfahrung und aktiven Projekten',
+    area_1: 'E-Commerce', area_2: 'Technologie', area_3: 'SaaS',
+    area_4: 'Events & Organisation', area_5: 'Finanzen',
+    area_6: 'Einzelhandel', area_7: 'Tourismus', area_8: 'Startup-Ökosystem',
+    cta_title: 'Lassen Sie uns Ihre nächste Wachstumsgeschichte gemeinsam schreiben.',
+    cta_desc: 'Kontaktieren Sie mich, um die digitale Sichtbarkeit, Reichweite und Conversion Ihrer Marke zu steigern.',
+    cta_btn: 'Kontakt aufnehmen',
     footer_copy: '© 2026 Fırat Atmaca. Alle Rechte vorbehalten.',
   },
   fr: {
-    nav_home: 'Accueil', nav_about: 'À propos', nav_projects: 'Projets',
-    nav_philosophy: 'Philosophie', nav_contact: 'Contact',
-    hero_badge: 'Digital Growth & Affiliate Marketing',
-    hero_desc: "Je gère une opération touchant des millions d'utilisateurs dans les médias numériques et le e-commerce.",
-    hero_btn1: 'Découvrir les projets', hero_btn2: 'Me contacter',
-    scroll: 'Défiler vers le bas',
-    about_title: 'À propos',
-    about_bio: "Je gère une opération touchant des millions d'utilisateurs dans les médias numériques et le e-commerce. Grâce à la gestion stratégique, aux partenariats de marque et à l'analyse de données, je convertis 30M+ de trafic mensuel en ventes.",
-    about_linkedin: 'Suivre sur LinkedIn',
-    stat_followers: 'Abonnés', stat_projects: 'Projets', stat_ideas: 'Idées',
-    projects_title: 'Projets',
-    projects_desc: 'Des idées que j\'ai réalisées et des histoires inspirantes',
-    proj1_name: 'Affiliate & Lifestyle',
-    proj1_desc: "Un écosystème atteignant un large public grâce à des collaborations de marque, du contenu lifestyle et des stratégies de marketing digital.",
-    proj2_name: 'Chemins de Conscience',
-    proj2_desc: "Contenu sur la conscience, le développement personnel et la transformation. Une plateforme accompagnant les gens dans leur voyage de découverte de soi.",
-    phil_title: 'Philosophie',
-    phil1_title: "Âme d'écrivain", phil1_desc: 'Chaque histoire commence par une idée. Je transforme les idées en histoires.',
-    phil2_title: 'Conscience', phil2_desc: 'Se connaître soi-même est le début de tous les voyages. La conscience est la clé de la transformation.',
-    phil3_title: 'Transformation', phil3_desc: 'Le changement est inévitable, la transformation est un choix. Chaque instant est une opportunité de renaître.',
-    contact_title: 'Contact', contact_desc: 'Contactez-moi et suivez mes projets',
-    contact_main: 'Compte principal', contact_catalog: 'Réductions & Catalogue actuel',
+    nav_home: 'Accueil', nav_about: 'À propos', nav_services: 'Services',
+    nav_areas: 'Domaines', nav_contact: 'Contact',
+    hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
+    hero_title: 'Des contenus touchant des millions.\nDes résultats mesurables.',
+    hero_subtitle: 'Grâce au marketing d\'affiliation, au marketing d\'influence et aux stratégies de croissance numérique axées sur la performance, j\'augmente la visibilité, la portée et les ventes des marques.',
+    hero_desc: 'Je gère des opérations médias numériques avec plus de 400 000 abonnés et des millions de vues mensuelles, développant des collaborations à fort engagement.',
+    hero_btn1: 'Voir mon travail', hero_btn2: 'Collaborons',
+    scroll: 'Défiler',
+    stat_1_val: '250K+', stat_1_label: 'Abonnés totaux',
+    stat_2_val: '12M+', stat_2_label: 'Vues mensuelles',
+    stat_3_val: '50+', stat_3_label: 'Collaborations marques',
+    stat_4_val: '100M+', stat_4_label: 'Portée totale',
+    about_title: 'Une approche axée sur la croissance',
+    about_p1: 'Je suis actif dans le marketing d\'influence, le marketing d\'affiliation et les médias numériques depuis des années.',
+    about_p2: 'Grâce à mes réseaux médias et plateformes de contenu, je génère des millions de vues chaque mois, aidant les marques à atteindre leurs publics cibles plus rapidement.',
+    about_p3: 'Je développe des partenariats axés sur la performance avec des marques de divers secteurs, transformant la visibilité en résultats concrets.',
+    about_msg1: 'Pouvoir de l\'influence.',
+    about_msg2: 'Marketing de performance.',
+    about_msg3: 'Résultats réels.',
+    services_title: 'Services',
+    services_desc: 'Solutions stratégiques pour développer votre marque',
+    svc1_title: 'Influence Marketing', svc1_desc: 'Campagnes de contenu à forte portée et engagement.',
+    svc2_title: 'Marketing d\'affiliation', svc2_desc: 'Systèmes de vente et de revenus basés sur la performance.',
+    svc3_title: 'Croissance numérique', svc3_desc: 'Stratégies de croissance data-driven et passage à l\'échelle.',
+    svc4_title: 'Stratégie de contenu', svc4_desc: 'Planification de contenu viral et orienté conversion.',
+    svc5_title: 'Partenariats de marque', svc5_desc: 'Collaborations de marque et campagnes sur mesure.',
+    svc6_title: 'Événement & Communauté', svc6_desc: 'Visibilité numérique pour événements, lancements et projets communautaires.',
+    areas_title: 'Domaines',
+    areas_desc: 'Secteurs avec expérience et projets actifs',
+    area_1: 'E-Commerce', area_2: 'Technologie', area_3: 'SaaS',
+    area_4: 'Événements & Organisation', area_5: 'Finance',
+    area_6: 'Commerce de détail', area_7: 'Tourisme', area_8: 'Écosystème startup',
+    cta_title: 'Construisons ensemble votre prochaine histoire de croissance.',
+    cta_desc: 'Contactez-moi pour augmenter la visibilité numérique, la portée et la performance de conversion de votre marque.',
+    cta_btn: 'Me contacter',
     footer_copy: '© 2026 Fırat Atmaca. Tous droits réservés.',
   },
   es: {
-    nav_home: 'Inicio', nav_about: 'Sobre mí', nav_projects: 'Proyectos',
-    nav_philosophy: 'Filosofía', nav_contact: 'Contacto',
-    hero_badge: 'Digital Growth & Affiliate Marketing',
-    hero_desc: 'Gestiono una operación que llega a millones de usuarios en medios digitales y comercio electrónico.',
-    hero_btn1: 'Explorar proyectos', hero_btn2: 'Contactar',
-    scroll: 'Desplázate hacia abajo',
-    about_title: 'Sobre mí',
-    about_bio: 'Gestiono una operación que llega a millones de usuarios en medios digitales y comercio electrónico. A través de la gestión estratégica, asociaciones de marca y análisis de datos, convierto 30M+ de tráfico mensual en ventas.',
-    about_linkedin: 'Seguir en LinkedIn',
-    stat_followers: 'Seguidores', stat_projects: 'Proyectos', stat_ideas: 'Ideas',
-    projects_title: 'Proyectos',
-    projects_desc: 'Ideas que hice realidad e historias inspiradoras',
-    proj1_name: 'Affiliate & Lifestyle',
-    proj1_desc: 'Un ecosistema que llega a audiencias amplias a través de colaboraciones de marca, contenido de estilo de vida y estrategias de marketing digital.',
-    proj2_name: 'Caminos de Conciencia',
-    proj2_desc: 'Contenido sobre conciencia, crecimiento personal y transformación. Una plataforma que acompaña a las personas en su viaje de autodescubrimiento.',
-    phil_title: 'Filosofía',
-    phil1_title: 'Alma de Escritor', phil1_desc: 'Toda historia comienza con una idea. Convierto ideas en historias.',
-    phil2_title: 'Conciencia', phil2_desc: 'Conocerte a ti mismo es el comienzo de todos los viajes. La conciencia es la clave de la transformación.',
-    phil3_title: 'Transformación', phil3_desc: 'El cambio es inevitable, la transformación es una elección. Cada momento es una oportunidad para renacer.',
-    contact_title: 'Contacto', contact_desc: 'Contáctame y sigue mis proyectos',
-    contact_main: 'Cuenta principal', contact_catalog: 'Descuentos & Catálogo actual',
+    nav_home: 'Inicio', nav_about: 'Sobre mí', nav_services: 'Servicios',
+    nav_areas: 'Áreas', nav_contact: 'Contacto',
+    hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
+    hero_title: 'Contenido que alcanza a millones.\nResultados medibles.',
+    hero_subtitle: 'A través del marketing de afiliación, marketing de influencers y estrategias de crecimiento digital orientadas al rendimiento, aumento la visibilidad, el alcance y las ventas de las marcas.',
+    hero_desc: 'Gestiono operaciones de medios digitales con más de 400.000 seguidores y millones de visitas mensuales, desarrollando colaboraciones de marca de alto engagement.',
+    hero_btn1: 'Ver mi trabajo', hero_btn2: 'Colaboremos',
+    scroll: 'Desplázate',
+    stat_1_val: '250K+', stat_1_label: 'Seguidores totales',
+    stat_2_val: '12M+', stat_2_label: 'Vistas mensuales',
+    stat_3_val: '50+', stat_3_label: 'Colaboraciones de marca',
+    stat_4_val: '100M+', stat_4_label: 'Alcance total',
+    about_title: 'Un enfoque centrado en el crecimiento',
+    about_p1: 'He estado activo en marketing de influencers, marketing de afiliación y medios digitales durante años.',
+    about_p2: 'A través de mis redes de medios y plataformas de contenido, genero millones de vistas cada mes, ayudando a las marcas a llegar a sus audiencias objetivo más rápido.',
+    about_p3: 'Desarrollo asociaciones orientadas al rendimiento con marcas de diversos sectores, convirtiendo la visibilidad en resultados reales.',
+    about_msg1: 'Poder del influencer.',
+    about_msg2: 'Marketing de rendimiento.',
+    about_msg3: 'Resultados reales.',
+    services_title: 'Servicios',
+    services_desc: 'Soluciones estratégicas para hacer crecer tu marca',
+    svc1_title: 'Marketing de Influencers', svc1_desc: 'Campañas de contenido de alto alcance y engagement.',
+    svc2_title: 'Marketing de Afiliación', svc2_desc: 'Sistemas de ventas e ingresos basados en rendimiento.',
+    svc3_title: 'Crecimiento Digital', svc3_desc: 'Estrategias de crecimiento basadas en datos y escalado.',
+    svc4_title: 'Estrategia de Contenido', svc4_desc: 'Planificación de contenido viral y orientado a conversión.',
+    svc5_title: 'Asociaciones de Marca', svc5_desc: 'Colaboraciones de marca y campañas personalizadas.',
+    svc6_title: 'Eventos & Comunidad', svc6_desc: 'Visibilidad digital para eventos, lanzamientos y proyectos comunitarios.',
+    areas_title: 'Áreas',
+    areas_desc: 'Sectores con experiencia y proyectos activos',
+    area_1: 'E-Commerce', area_2: 'Tecnología', area_3: 'SaaS',
+    area_4: 'Eventos & Organización', area_5: 'Finanzas',
+    area_6: 'Venta minorista', area_7: 'Turismo', area_8: 'Ecosistema startup',
+    cta_title: 'Construyamos juntos tu próxima historia de crecimiento.',
+    cta_desc: 'Contáctame para aumentar la visibilidad digital, el alcance y el rendimiento de conversión de tu marca.',
+    cta_btn: 'Contactar',
     footer_copy: '© 2026 Fırat Atmaca. Todos los derechos reservados.',
   },
 };
@@ -130,7 +195,11 @@ function switchLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (LANG[lang] && LANG[lang][key]) {
-      el.textContent = LANG[lang][key];
+      if (key === 'hero_title' || key === 'cta_title') {
+        el.innerHTML = LANG[lang][key].replace(/\n/g, '<br>');
+      } else {
+        el.textContent = LANG[lang][key];
+      }
     }
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -145,8 +214,8 @@ switchLang(savedLang);
 
 const words = [
   'Digital Growth & Affiliate Marketing',
-  'Founder & Head of Content',
-  '30M+ Monthly Reach'
+  'Influencer & Performance Marketing',
+  '400K+ Followers | 12M+ Monthly Views'
 ];
 
 const typewriterEl = document.getElementById('typewriter');
@@ -166,7 +235,8 @@ function typeEffect() {
   }
   setTimeout(typeEffect, isDeleting ? 30 : 60);
 }
-typeEffect();
+
+if (typewriterEl) typeEffect();
 
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.navbar');
@@ -182,7 +252,7 @@ window.addEventListener('scroll', () => {
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, { threshold: 0.1 });
-document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -192,91 +262,6 @@ if (hamburger && navLinks) {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 }
-
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const target = entry.target;
-      const numEl = target.querySelector('.stat-num');
-      if (numEl && !target.dataset.counted) {
-        target.dataset.counted = 'true';
-        const text = numEl.textContent;
-        const digits = text.match(/[\d]/g);
-        if (!digits) return;
-        const suffix = text.replace(/[\d]/g, '');
-        const max = parseInt(text) || 0;
-        let current = 0;
-        const inc = max / 40;
-        const timer = setInterval(() => {
-          current += inc;
-          if (current >= max) { numEl.textContent = max + suffix; clearInterval(timer); }
-          else numEl.textContent = Math.floor(current) + suffix;
-        }, 30);
-      }
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.stat').forEach(el => counterObserver.observe(el));
-
-
-
-const glow = document.querySelector('.mouse-glow');
-if (glow) {
-  let mx = 0, my = 0, gx = 0, gy = 0;
-  document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
-  function animateGlow() {
-    gx += (mx - gx) * 0.08;
-    gy += (my - gy) * 0.08;
-    glow.style.left = gx + 'px';
-    glow.style.top = gy + 'px';
-    requestAnimationFrame(animateGlow);
-  }
-  animateGlow();
-}
-
-function splitText() {
-  document.querySelectorAll('.split-text').forEach(el => {
-    if (el.dataset.split) return;
-    el.dataset.split = 'true';
-    const text = el.textContent;
-    const chars = text.split('');
-    el.textContent = '';
-    chars.forEach((char, i) => {
-      const span = document.createElement('span');
-      span.textContent = char === ' ' ? '\u00A0' : char;
-      span.style.display = 'inline-block';
-      span.style.transition = `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.03}s`;
-      span.style.opacity = '0';
-      span.style.transform = 'translateY(30px) rotateX(90deg)';
-      el.appendChild(span);
-    });
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll('span').forEach(s => { s.style.opacity = '1'; s.style.transform = 'translateY(0) rotateX(0deg)'; });
-          obs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.3 });
-    obs.observe(el);
-  });
-}
-splitText();
-
-document.querySelectorAll('.btn-primary').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    for (let i = 0; i < 12; i++) {
-      const spark = document.createElement('div');
-      spark.style.cssText = `position:fixed;width:6px;height:6px;border-radius:50%;background:${['#c9a84c','#e8d08a','#fff'][Math.floor(Math.random()*3)]};pointer-events:none;z-index:9999;left:${e.clientX}px;top:${e.clientY}px`;
-      document.body.appendChild(spark);
-      const angle = (Math.PI * 2 / 12) * i;
-      const vel = 120 + Math.random() * 80;
-      const dx = Math.cos(angle) * vel;
-      const dy = Math.sin(angle) * vel - 100;
-      spark.animate([{ transform: 'translate(0,0) scale(1)', opacity: 1 }, { transform: `translate(${dx}px, ${dy}px) scale(0)`, opacity: 0 }], { duration: 800, easing: 'cubic-bezier(0,.8,.5,1)' }).onfinish = () => spark.remove();
-    }
-  });
-});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -293,13 +278,13 @@ function createParticles() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   const particles = [];
-  const count = Math.min(60, Math.floor(window.innerWidth / 20));
+  const count = Math.min(40, Math.floor(window.innerWidth / 25));
   for (let i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-      size: Math.random() * 2 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.3, speedY: (Math.random() - 0.5) * 0.3,
-      opacity: Math.random() * 0.3 + 0.05
+      size: Math.random() * 1.5 + 0.3,
+      speedX: (Math.random() - 0.5) * 0.2, speedY: (Math.random() - 0.5) * 0.2,
+      opacity: Math.random() * 0.2 + 0.03
     });
   }
   function animate() {
@@ -310,7 +295,7 @@ function createParticles() {
       if (p.y < 0) p.y = canvas.height; if (p.y > canvas.height) p.y = 0;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201, 168, 76, ${p.opacity})`;
+      ctx.fillStyle = `rgba(59, 130, 246, ${p.opacity})`;
       ctx.fill();
     });
     requestAnimationFrame(animate);
@@ -324,4 +309,16 @@ window.addEventListener('resize', () => {
   if (canvas) { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
 });
 
-
+const glow = document.getElementById('mouseGlow');
+if (glow) {
+  let mx = 0, my = 0, gx = 0, gy = 0;
+  document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
+  function animateGlow() {
+    gx += (mx - gx) * 0.06;
+    gy += (my - gy) * 0.06;
+    glow.style.left = gx + 'px';
+    glow.style.top = gy + 'px';
+    requestAnimationFrame(animateGlow);
+  }
+  animateGlow();
+}

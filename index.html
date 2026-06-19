@@ -15,6 +15,21 @@
 </head>
 <body>
 
+  <div class="lang-overlay" id="langOverlay">
+    <div class="lang-overlay-content">
+      <h2>Select Language / Dil Seçin</h2>
+      <div class="lang-overlay-grid">
+        <button class="lang-overlay-btn" data-lang="tr" onclick="selectLang('tr')">🇹🇷 Türkçe</button>
+        <button class="lang-overlay-btn" data-lang="en" onclick="selectLang('en')">🇬🇧 English</button>
+        <button class="lang-overlay-btn" data-lang="de" onclick="selectLang('de')">🇩🇪 Deutsch</button>
+        <button class="lang-overlay-btn" data-lang="fr" onclick="selectLang('fr')">🇫🇷 Français</button>
+        <button class="lang-overlay-btn" data-lang="es" onclick="selectLang('es')">🇪🇸 Español</button>
+        <button class="lang-overlay-btn" data-lang="zh" onclick="selectLang('zh')">🇨🇳 中文</button>
+        <button class="lang-overlay-btn" data-lang="ja" onclick="selectLang('ja')">🇯🇵 日本語</button>
+      </div>
+    </div>
+  </div>
+
   <div class="scroll-progress" id="scrollProgress"></div>
   <div class="mouse-glow" id="mouseGlow"></div>
   <canvas id="particles-canvas"></canvas>

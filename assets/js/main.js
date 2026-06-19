@@ -19,7 +19,7 @@ const LANG = {
     about_msg1: 'Influencer Gücü.',
     about_msg2: 'Performans Pazarlaması.',
     about_msg3: 'Gerçek Sonuçlar.',
-    services_title: 'Hizmetler',
+    services_title: 'Çalışma Alanlarım',
     services_desc: 'Markanızı büyütmek için sunduğum stratejik çözümler',
     svc1_title: 'Influencer Marketing', svc1_desc: 'Markalar için yüksek erişim ve etkileşim sağlayan içerik kampanyaları.',
     svc2_title: 'Affiliate Marketing', svc2_desc: 'Performans bazlı satış ve gelir artırma sistemleri.',

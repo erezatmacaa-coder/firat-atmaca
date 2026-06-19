@@ -324,13 +324,28 @@ body {
 }
 .service-card:hover .service-glow { opacity: 1; }
 
-.areas-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.area-tag {
-  padding: 12px 28px; border: 1px solid var(--border); border-radius: 50px;
-  font-size: 14px; font-weight: 500; color: var(--text-muted);
-  transition: all 0.3s; cursor: default;
+.areas-grid {
+  display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;
+  max-width: 720px; margin: 0 auto;
 }
-.area-tag:hover { border-color: var(--primary); color: var(--text); background: rgba(59,130,246,0.04); }
+.area-tag {
+  padding: 16px 32px; border: 1px solid rgba(59,130,246,0.06); border-radius: 50px;
+  font-size: 15px; font-weight: 500; color: var(--text-muted);
+  background: rgba(15,23,42,0.6); backdrop-filter: blur(4px);
+  transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94); cursor: default;
+  position: relative; letter-spacing: 0.3px;
+}
+.area-tag::before {
+  content: ''; position: absolute; inset: -1px; border-radius: 50px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(6,214,160,0.1));
+  opacity: 0; transition: opacity 0.4s; z-index: -1;
+}
+.area-tag:hover {
+  color: var(--text); border-color: transparent;
+  background: rgba(15,23,42,0.8); transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.08);
+}
+.area-tag:hover::before { opacity: 1; }
 
 .cta-section .cta-content { text-align: center; max-width: 700px; margin: 0 auto; }
 .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }

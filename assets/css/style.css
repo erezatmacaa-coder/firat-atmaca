@@ -145,6 +145,8 @@ body {
 .btn-outline:hover { border-color: var(--primary); color: var(--primary); background: rgba(59,130,246,0.06); }
 .btn-linkedin { border: 1px solid rgba(10,102,194,0.3); color: #0A66C2; }
 .btn-linkedin:hover { background: #0A66C2; color: #fff; border-color: #0A66C2; }
+.btn-instagram { border: 1px solid rgba(225,48,108,0.3); color: #E1306C; }
+.btn-instagram:hover { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); color: #fff; border-color: transparent; }
 
 .scroll-indicator {
   position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);

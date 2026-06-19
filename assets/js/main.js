@@ -290,12 +290,6 @@ function selectLang(lang) {
   switchLang(lang);
 }
 
-const savedLang = localStorage.getItem('site_lang');
-if (savedLang) {
-  document.getElementById('langOverlay').classList.add('hidden');
-  switchLang(savedLang);
-}
-
 const words = [
   'Digital Growth & Affiliate Marketing',
   'Influencer & Performance Marketing',

@@ -411,8 +411,7 @@ footer p { color: var(--text-muted); font-size: 13px; }
   font-size: 20px; font-weight: 500; line-height: 1.5; margin-bottom: 8px;
   color: var(--text); font-style: italic;
 }
-.lang-quote::before { content: '\201C'; font-size: 36px; color: var(--primary); font-style: normal; line-height: 0; vertical-align: -6px; margin-right: 4px; }
-.lang-quote::after { content: '\201D'; font-size: 36px; color: var(--primary); font-style: normal; line-height: 0; vertical-align: -4px; margin-left: 4px; }
+.lang-quote .q-mark { font-size: 36px; color: var(--primary); font-style: normal; vertical-align: -4px; }
 .lang-quote-sub { font-size: 14px; color: var(--text); margin-bottom: 28px; letter-spacing: 3px; font-weight: 400; }
 .lang-quote-sub span { background: linear-gradient(135deg,#3B82F6,#06D6A0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .lang-overlay-content h2 {

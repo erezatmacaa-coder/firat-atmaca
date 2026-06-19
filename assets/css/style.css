@@ -411,7 +411,8 @@ footer p { color: var(--text-muted); font-size: 13px; }
 }
 .lang-quote::before { content: '\201C'; font-size: 36px; color: var(--primary); font-style: normal; line-height: 0; vertical-align: -6px; margin-right: 4px; }
 .lang-quote::after { content: '\201D'; font-size: 36px; color: var(--primary); font-style: normal; line-height: 0; vertical-align: -4px; margin-left: 4px; }
-.lang-quote-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 40px; letter-spacing: 2px; font-weight: 300; }
+.lang-quote-sub { font-size: 14px; color: var(--text); margin-bottom: 40px; letter-spacing: 3px; font-weight: 400; }
+.lang-quote-sub span { background: linear-gradient(135deg,#3B82F6,#06D6A0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .lang-overlay-content h2 {
   font-size: 13px; font-weight: 400; margin-bottom: 20px; letter-spacing: 3px;
   color: var(--text-muted); text-transform: uppercase;

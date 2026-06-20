@@ -1,7 +1,7 @@
 const LANG = {
   tr: {
-    nav_home: 'Ana Sayfa', nav_about: 'Hakkımda',     nav_services: 'Çalışma Alanlarım',
-    nav_areas: 'Deneyim Alanlarım', nav_contact: 'İletişim',
+    nav_home: 'Ana Sayfa', nav_about: 'Hakkımda', nav_services: 'Çalışma Alanlarım',
+    nav_areas: 'Deneyim Alanlarım', nav_contact: 'İletişim', welcome: 'Hoş Geldiniz',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Milyonlarca Kişiye Ulaşan İçerikler.\nÖlçülebilir Sonuçlar.',
     hero_subtitle: 'Affiliate marketing, influencer marketing ve performans odaklı dijital büyüme stratejileriyle markaların görünürlüğünü, erişimini ve satışlarını artırıyorum.',
@@ -40,8 +40,8 @@ const LANG = {
     footer_copy: '© 2026 Fırat Atmaca. Tüm hakları saklıdır.',
   },
   en: {
-    nav_home: 'Home', nav_about: 'About',     nav_services: 'My Work Areas',
-    nav_areas: 'My Expertise', nav_contact: 'Contact',
+    nav_home: 'Home', nav_about: 'About', nav_services: 'My Work Areas',
+    nav_areas: 'My Expertise', nav_contact: 'Contact', welcome: 'Welcome',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Content Reaching Millions.\nMeasurable Results.',
     hero_subtitle: 'Driving visibility, reach, and sales for brands through affiliate marketing, influencer marketing, and performance-driven digital growth strategies.',
@@ -81,7 +81,7 @@ const LANG = {
   },
   de: {
     nav_home: 'Start', nav_about: 'Über mich',     nav_services: 'Meine Arbeitsbereiche',
-    nav_areas: 'Meine Expertise', nav_contact: 'Kontakt',
+    nav_areas: 'Meine Expertise', nav_contact: 'Kontakt', welcome: 'Willkommen',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Inhalte, die Millionen erreichen.\nMessbare Ergebnisse.',
     hero_subtitle: 'Durch Affiliate-Marketing, Influencer-Marketing und leistungsorientierte digitale Wachstumsstrategien steigere ich Sichtbarkeit, Reichweite und Verkäufe für Marken.',
@@ -121,7 +121,7 @@ const LANG = {
   },
   fr: {
     nav_home: 'Accueil', nav_about: 'À propos',     nav_services: 'Mes domaines',
-    nav_areas: 'Mon expertise', nav_contact: 'Contact',
+    nav_areas: 'Mon expertise', nav_contact: 'Contact', welcome: 'Bienvenue',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Des contenus touchant des millions.\nDes résultats mesurables.',
     hero_subtitle: 'Grâce au marketing d\'affiliation, au marketing d\'influence et aux stratégies de croissance numérique axées sur la performance, j\'augmente la visibilité, la portée et les ventes des marques.',
@@ -161,7 +161,7 @@ const LANG = {
   },
   es: {
     nav_home: 'Inicio', nav_about: 'Sobre mí',     nav_services: 'Mis áreas',
-    nav_areas: 'Mi experiencia', nav_contact: 'Contacto',
+    nav_areas: 'Mi experiencia', nav_contact: 'Contacto', welcome: 'Bienvenido',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Contenido que alcanza a millones.\nResultados medibles.',
     hero_subtitle: 'A través del marketing de afiliación, marketing de influencers y estrategias de crecimiento digital orientadas al rendimiento, aumento la visibilidad, el alcance y las ventas de las marcas.',
@@ -201,7 +201,7 @@ const LANG = {
   },
   zh: {
     nav_home: '首页', nav_about: '关于',     nav_services: '工作领域',
-    nav_areas: '专业领域', nav_contact: '联系',
+    nav_areas: '专业领域', nav_contact: '联系', welcome: '欢迎',
     hero_tag: '数字增长 • 联盟营销 • 网红营销',
     hero_title: '覆盖数百万人的内容。\n可衡量的结果。',
     hero_subtitle: '通过联盟营销、网红营销和以绩效为导向的数字增长策略，提升品牌的可见度、覆盖率和销售额。',
@@ -241,7 +241,7 @@ const LANG = {
   },
   ja: {
     nav_home: 'ホーム', nav_about: '概要', nav_services: '業務内容',
-    nav_areas: '専門分野', nav_contact: 'お問い合わせ',
+    nav_areas: '専門分野', nav_contact: 'お問い合わせ', welcome: 'ようこそ',
     hero_tag: 'デジタルグロース • アフィリエイトマーケティング • インフルエンサーマーケティング',
     hero_title: '何百万人に届くコンテンツ。\n測定可能な結果。',
     hero_subtitle: 'アフィリエイトマーケティング、インフルエンサーマーケティング、パフォーマンス重視のデジタルグロース戦略により、ブランドの認知度、リーチ、売上を向上させています。',
@@ -281,7 +281,7 @@ const LANG = {
   },
   ru: {
     nav_home: 'Главная', nav_about: 'Обо мне', nav_services: 'Направления работы',
-    nav_areas: 'Экспертиза', nav_contact: 'Контакты',
+    nav_areas: 'Экспертиза', nav_contact: 'Контакты', welcome: 'Добро пожаловать',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'Контент, достигающий миллионов.\nИзмеримые результаты.',
     hero_subtitle: 'Специалист по affiliate marketing, influencer marketing и цифровому росту, ориентированному на результат. Помогаю брендам усиливать их цифровое присутствие с помощью стратегий, основанных на производительности и вовлекающем контенте.',
@@ -315,7 +315,7 @@ const LANG = {
   },
   ar: {
     nav_home: 'الرئيسية', nav_about: 'من أنا', nav_services: 'مجالات العمل',
-    nav_areas: 'الخبرة', nav_contact: 'اتصل بي',
+    nav_areas: 'الخبرة', nav_contact: 'اتصل بي', welcome: 'أهلاً وسهلاً',
     hero_tag: 'DIGITAL GROWTH • AFFILIATE MARKETING • INFLUENCER MARKETING',
     hero_title: 'محتوى يصل إلى الملايين.\nنتائج قابلة للقياس.',
     hero_subtitle: 'متخصص في التسويق بالعمولة والتسويق عبر المؤثرين والنمو الرقمي الموجه نحو النتائج. أساعد العلامات التجارية على تعزيز حضورها الرقمي من خلال استراتيجيات مبنية على الأداء ومحتوى يشرك الجمهور حقاً.',
@@ -371,7 +371,14 @@ function selectLang(lang) {
   const overlay = document.getElementById('langOverlay');
   overlay.classList.add('hidden');
   overlay.addEventListener('transitionend', () => { overlay.style.display = 'none'; }, { once: true });
-  switchLang(lang);
+  const welcome = document.getElementById('welcomeOverlay');
+  document.getElementById('welcomeText').textContent = LANG[lang].welcome;
+  welcome.classList.remove('hidden');
+  setTimeout(() => {
+    welcome.classList.add('hidden');
+    document.getElementById('siteWrapper').classList.add('visible');
+    switchLang(lang);
+  }, 1500);
 }
 
 const words = [

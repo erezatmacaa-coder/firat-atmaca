@@ -453,3 +453,40 @@ footer p { color: var(--text-muted); font-size: 13px; }
   .lang-overlay-grid { grid-template-columns: 1fr; }
   .lang-overlay-btn { font-size: 13px; padding: 10px 14px; }
 }
+
+/* SEA PERFORMANCE PATCH v1 */
+#hero { min-height: 100svh; padding-bottom: 120px; }
+.scroll-indicator {
+  bottom: 30px;
+  max-width: calc(100% - 32px);
+  white-space: nowrap;
+  z-index: 4;
+  will-change: transform, opacity;
+}
+.scroll-indicator .line { height: 26px; }
+.hero-gradient { will-change: opacity; transform: none; animation-duration: 16s; }
+.hero-grid { contain: paint; }
+.mouse-glow { width: 420px; height: 420px; opacity: .65; }
+#particles-canvas { opacity: .45; }
+
+@media (max-width: 768px) {
+  #hero { min-height: 100svh; padding: 110px 0 125px; }
+  .hero-content { max-width: 680px; padding-bottom: 25px; }
+  .hero-badge { margin-bottom: 22px; }
+  .hero-title { line-height: 1.06; margin-bottom: 20px; }
+  .hero-subtitle { line-height: 1.58; }
+  .hero-desc { margin-bottom: 28px; line-height: 1.65; }
+  .scroll-indicator { bottom: 18px; font-size: 9px; letter-spacing: 1.5px; }
+  .scroll-indicator .line { height: 22px; margin-top: 6px; }
+  .mouse-glow { display: none; }
+  #particles-canvas { opacity: .2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

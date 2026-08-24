@@ -1,0 +1,70 @@
+name: Fix scroll indicator and performance
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch CSS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('assets/css/style.css')
+          s = p.read_text(encoding='utf-8')
+          marker = '/* SEA PERFORMANCE PATCH v1 */'
+          if marker not in s:
+              patch = r'''
+
+          /* SEA PERFORMANCE PATCH v1 */
+          #hero { min-height: 100svh; padding-bottom: 120px; }
+          .scroll-indicator {
+            bottom: 30px;
+            max-width: calc(100% - 32px);
+            white-space: nowrap;
+            z-index: 4;
+            will-change: transform, opacity;
+          }
+          .scroll-indicator .line { height: 26px; }
+          .hero-gradient { will-change: opacity; transform: none; animation-duration: 16s; }
+          .hero-grid { contain: paint; }
+          .mouse-glow { width: 420px; height: 420px; opacity: .65; }
+          #particles-canvas { opacity: .45; }
+
+          @media (max-width: 768px) {
+            #hero { min-height: 100svh; padding: 110px 0 125px; }
+            .hero-content { max-width: 680px; padding-bottom: 25px; }
+            .hero-badge { margin-bottom: 22px; }
+            .hero-title { line-height: 1.06; margin-bottom: 20px; }
+            .hero-subtitle { line-height: 1.58; }
+            .hero-desc { margin-bottom: 28px; line-height: 1.65; }
+            .scroll-indicator { bottom: 18px; font-size: 9px; letter-spacing: 1.5px; }
+            .scroll-indicator .line { height: 22px; margin-top: 6px; }
+            .mouse-glow { display: none; }
+            #particles-canvas { opacity: .2; }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+              animation-duration: .01ms !important;
+              animation-iteration-count: 1 !important;
+              scroll-behavior: auto !important;
+              transition-duration: .01ms !important;
+            }
+          }
+          '''
+              p.write_text(s + patch, encoding='utf-8')
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/css/style.css
+          if git diff --cached --quiet; then echo "No changes"; else git commit -m "Fix hero scroll indicator and mobile performance"; git push; fi

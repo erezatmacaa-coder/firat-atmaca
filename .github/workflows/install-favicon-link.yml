@@ -1,0 +1,39 @@
+name: Install favicon link
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  favicon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add FA favicon metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path("index.html")
+          s = p.read_text(encoding="utf-8")
+          marker = '<link rel="icon" href="favicon.svg" type="image/svg+xml" />'
+          if marker not in s:
+              anchor = '<link rel="stylesheet" href="assets/css/style.css" />'
+              s = s.replace(anchor, anchor + "\n  " + marker + "\n  <link rel=\"apple-touch-icon\" href=\"favicon.svg\" />", 1)
+              p.write_text(s, encoding="utf-8")
+          else:
+              print("Favicon metadata already installed")
+
+      - name: Commit favicon metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add FA favicon metadata"
+          git push
